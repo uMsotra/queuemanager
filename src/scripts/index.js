@@ -34,7 +34,7 @@ const firebaseConfig = {
       availabilitySwitch.setAttribute('data-barber', barber); // Set data attribute to identify the barber
   
       const barberQueueList = document.createElement('ul');
-  
+  //
       // Fetch queue data for each barber
       queueRef.orderByChild('barber').equalTo(barber).on('value', snapshot => {
         barberQueueList.innerHTML = ''; // Clear previous content
