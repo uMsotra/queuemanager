@@ -1,0 +1,240 @@
+/* General styling */
+body {
+  background-color: #1f1f1f;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 40px auto;
+  text-align: center;
+}
+
+/* Header styling */
+.futuristic-heading {
+  font-size: 48px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+/* Barber queue styling */
+.barber-queue {
+  background-color: #333;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+.barber-queue h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.barber-queue ul {
+  list-style: none;
+  padding: 0;
+}
+
+.barber-queue li {
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: #fff;
+}
+
+/* Customer information styling */
+.barber-queue li span {
+  font-weight: bold;
+}
+
+.barber-queue li::before {
+  content: "- ";
+  margin-right: 5px;
+}
+
+.customer-card {
+  background-color: rgba(68, 68, 68, 0.8); /* Adjust the alpha value for transparency */
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 8px;
+  box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.1);
+  opacity: 0.9; /* Adjust the opacity value between 0 (fully transparent) and 1 (fully opaque) */
+}
+.barber-queue {
+  opacity: 0.7; /* Adjust the opacity value between 0 (fully transparent) and 1 (fully opaque) */
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+
+.customer-nickname {
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.joined-time {
+  font-style: italic;
+  color: #ccc;
+  font-size: 14px;
+}
+
+.remove-button {
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.remove-button:hover {
+  background-color: #cc4731;
+}
+
+/* Example fade-in animation */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.customer-card {
+  /* Other styles */
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Example transition for queue display */
+.queue-display {
+  transition: all 0.3s ease-in-out;
+}
+
+
+.logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Emphasize barber queue notice */
+.queue-notice {
+  color: #ccc;
+  font-style: italic;
+  margin-top: 20px;
+}
+
+.back-to-index {
+  /* Button styling */
+  background-color: #f5425d; /* Retro pink */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif; /* Or another retro-ish font */
+  text-transform: uppercase; /* Capitalize for a retro feel */
+  font-weight: bold;
+  cursor: pointer;
+
+  /* Hover effect */
+  transition: all 0.2s ease-in-out;
+}
+
+.back-to-index:hover {
+  background-color: #e5354e; /* Slightly darker pink */
+}
+
+/* Position the button */
+.header {
+  /* ... your existing header styles ... */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  /* ... your existing logo styles ... */
+  margin-right: auto; /* Push logo to the left */
+}
+
+.back-to-index {
+  margin-left: auto; /* Push button to the right */
+}
+/* Add this CSS code in your stylesheet */
+
+/* Style for the WhatsApp link */
+a.whatsapp-link {
+  color: #25D366; /* Set the color to WhatsApp green */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Make the text bold */
+  font-size: 16px; /* Adjust the font size */
+  padding: 8px 12px; /* Add padding for better clickability */
+  border-radius: 4px; /* Round the corners */
+  background-color: #EDEDED; /* Light gray background */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth color transition */
+}
+
+/* On hover, change color and background */
+a.whatsapp-link:hover {
+  color: #fff; /* Change text color to white */
+  background-color: #25D366; /* Change background color to WhatsApp green */
+}
+/* Add this CSS to your styles.css file or create a new CSS file and link it */
+
+/* Style for the switch */
+.availability-switch {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 40px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  
+}
+
+/* Style for the switch thumb */
+.availability-switch::before {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #f44336;  /* Green: available */
+  transition: 0.3s;
+}
+
+/* Checked state style for the switch thumb */
+.availability-switch:checked::before {
+  background-color:#4CAF50; /* Red: unavailable */
+  transform: translateX(20px);
+}
+
+.background-tiles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+  perspective: 1000px;
+  z-index: -1; /* Move the tiles to the back */
+  pointer-events: none;
+  background-attachment: fixed; /* Keeps the background fixed while scrolling */
+}

@@ -1,0 +1,279 @@
+/* Ensure full-page coverage */
+html, body {
+    height: 100%;
+    margin: 0;
+   
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #1f1f1f;
+}
+
+.container {
+    position: relative;
+    height: 100%;
+    z-index: 1; /* Place content in front of background */
+}
+
+.background-tiles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+    perspective: 1000px;
+    z-index: 0;
+    pointer-events: none;
+  }
+  
+
+  
+  .background-tiles img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease; /* Keep the image flipping animation */
+  }
+  
+  .background-tiles {
+    opacity: 0.08; /* Adjust opacity as needed */
+  }
+  
+  
+  
+
+/* Apply hover effect on tiles */
+.background-tiles img:hover {
+    transform: rotateX(180deg) rotateY(180deg);
+}
+
+
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+/* Style the header */
+.futuristic-heading {
+    font-size: 2.5em;
+}
+
+/* Style the form */
+.form-futuristic {
+    margin-top: 30px;
+}
+
+label, input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 8px;
+    border: 1px solid #fff;
+    background-color: #333;
+    color: #fff;
+}
+
+input[type="text"]:focus {
+    outline: none;
+}
+
+/* Style the barber buttons */
+.barber-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    
+}
+
+.barber-button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: none;
+    background-color: #4444443b;
+    color: #fff;
+    cursor: pointer;
+    opacity: 0.5; 
+}
+
+.barber-button:hover,
+.barber-button.selected {
+    background-color:  #b9a243;
+}
+
+
+.futuristic-button {
+    padding: 14px 32px;
+    margin-top: 20px;
+    border: none;
+    background-color: #b9a243;
+    color: #1f1f1f;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 8px;
+    opacity: 0.6; 
+}
+
+.futuristic-button:hover {
+    background-color: #d4bd5b;
+    transform: scale(1.05);
+}
+
+
+
+/* Media Query for Mobile */
+@media screen and (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+}
+/* CSS for hover effect on barber buttons */
+.barber-button:hover {
+    transform: scale(1.05);
+
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    /* Add transitions or animations for the logo */
+}
+/* Enhance the input fields */
+
+/* Style for labels */
+label {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: #ccc;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Update labels for the specific form */
+.form-futuristic label {
+    margin-top: 20px;
+}
+/* Adjusted button styles */
+.barber-button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: none;
+    background-color: #444;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    flex: 1;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9em;
+}
+
+/* Uniform size for images */
+.barber-icon {
+    width: 100px; 
+    height: 100px; 
+    margin-right: 10px;
+}
+
+/* Center text and image */
+.barber-button img {
+    vertical-align: middle;
+}
+
+/* Hover effect */
+.barber-button:hover {
+    transform: scale(1.05);
+    background-color:  #b9a243;
+}
+
+/* Media Query for Mobile */
+@media screen and (max-width: 600px) {
+    /* Adjustments for smaller screens */
+    .container {
+        width: 90%;
+        padding-top: 20px; 
+    }
+    .logo {
+        width: 100px; 
+    }
+    input[type="text"] {
+        width: 100%; /* Full width for input fields */
+
+    }
+    .background-tiles img {
+        display: none; /* Hide all images by default */
+    }
+
+    .barber-buttons {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center buttons */
+    }
+
+    .barber-button {
+        width: 90%; /* Adjust button width */
+        margin: 8px; /* Adjust margin between buttons */
+
+    }
+    .barber-button.selected {
+        background-color:  #b9a243;
+    }
+    
+}
+
+input[type="tel"] {
+    width: 80%;
+    padding: 12px;
+    border: 2px solid #b9a243;
+    background-color: #333;
+    color: #eee;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="tel"]:focus {
+    outline: none;
+    border-color: #d4bd5b;
+}
+input[type="text"] {
+    width: 80%;
+    padding: 12px;
+    border: 2px solid #b9a243;
+    background-color: #333;
+    color: #eee;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+.form-futuristic input[type="text"],
+.form-futuristic input[type="tel"] {
+    width: 80%; /* Same width as the WhatsApp number field */
+    padding: 12px;
+    border: 2px solid #b9a243;
+    background-color: #333;
+    color: #eee;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+    margin: 0 auto; /* Center the input fields */
+    display: block; /* Ensure they stack in a block */
+}
+
+.form-futuristic input[type="text"]:focus,
+.form-futuristic input[type="tel"]:focus {
+    outline: none;
+    border-color: #d4bd5b;
+}
